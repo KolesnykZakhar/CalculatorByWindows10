@@ -25,7 +25,7 @@ public class Controller {
     private static final String ONE_DIV_X = "1/( ";
     private static final String BRACE = " )";
     private static final String CLEAR_BRACE = "   ";
-    private static final String CONTAIN_BRACE = "(";
+//    private static final String CONTAIN_BRACE = "(";
     private static final String POINT = ".";
     private static final String COMMA = ",";
     private static final String OLD_MANTISSA = "E";
@@ -45,8 +45,8 @@ public class Controller {
 
     private static final BigDecimal HUNDRED = new BigDecimal("100");
     private static final BigDecimal TWO = new BigDecimal("2");
-    private static final BigDecimal MIN_NOT_ENGINEERING_UP_BORDER = new BigDecimal("0.0000000000000006");
-    private static final BigDecimal MIN_NOT_ENGINEERING_DOWN_BORDER = new BigDecimal("0.0000000000000001");
+//    private static final BigDecimal MIN_NOT_ENGINEERING_UP_BORDER = new BigDecimal("0.0000000000000006");
+//    private static final BigDecimal MIN_NOT_ENGINEERING_DOWN_BORDER = new BigDecimal("0.0000000000000001");
 
     private BigDecimal num1 = ZERO;
     private BigDecimal num2 = ZERO;
