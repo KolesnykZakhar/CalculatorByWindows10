@@ -86,14 +86,63 @@ public class Main extends Application {
         controller.outputLower.textProperty().addListener((ob, o, n) -> {
             double k = scene.getWidth() / n.length() / DEFAULT_WIDTH_MULTI_DEFAULT_LENGTH;
             double size = 40d;
+            System.out.println(k);
             if (n.length() > 10 && scene.getWidth() < 655d) {
+//                if (scene.getWidth() >= 250 && scene.getWidth() < 315) {
+//                    size = 25;
+//                } else if (scene.getWidth() > 315 && scene.getWidth() < 390) {
+//                    size = 30;
+//                } else if (scene.getWidth() > 390 && scene.getWidth() < 453) {
+//                    size = 35;
+//                    controller.outputLower.fontProperty().bind(new SimpleObjectProperty<>(Font.font(controller.outputLower.getFont().getFamily(), FontWeight.SEMI_BOLD, size * k)));
                     controller.outputLower.setStyle("-fx-font-size: " + (size*k) + "px;");
                     nodes.put(controller.outputLower, Font.font((controller.outputLower.getFont().getFamily()), FontWeight.SEMI_BOLD, size * k));
+//                }
             } else {
+//                controller.outputLower.fontProperty().bind(new SimpleObjectProperty<>(Font.font(controller.outputLower.getFont().getFamily(), FontWeight.SEMI_BOLD, size)));
                 controller.outputLower.setStyle("-fx-font-size: " + size + "px;");
                 nodes.put(controller.outputLower, Font.font((controller.outputLower.getFont().getFamily()), FontWeight.SEMI_BOLD, size));
             }
         });
+
+//        controller.outputLower.widthProperty().addListener((observableValueW, oldDisplayWidth, newDisplayWidth) -> {
+////                controller.outputLower.setPrefColumnCount(controller.outputLower.getText().length() +1);
+//            System.out.println(controller.outputLower.getWidth());
+//            double size = 40;
+//            if (controller.outputLower.getWidth() >= 250 && controller.outputLower.getWidth() < 315) {
+//                size = 20;
+//            } else if (controller.outputLower.getWidth() > 315 && controller.outputLower.getWidth() < 390) {
+//                size = 30;
+//            } else if (controller.outputLower.getWidth() > 390 && newDisplayWidth.doubleValue() < 453) {
+//                size = 35;
+//            }
+//            controller.outputLower.fontProperty().bind(new SimpleObjectProperty<>(Font.font(controller.outputLower.getFont().getFamily(), FontWeight.SEMI_BOLD, size)));
+//            nodes.put(controller.outputLower, Font.font((controller.outputLower.getFont().getFamily()), FontWeight.SEMI_BOLD, size));
+//
+//        });
+////        controller.outputLower.setMinWidth(Region.USE_PREF_SIZE);
+////        controller.outputLower.setMaxWidth(Region.USE_PREF_SIZE);
+//        controller.outputLower.textProperty().addListener((ov, prevText, currText) -> {
+//            // Do this in a Platform.runLater because of Textfield has no padding at first time and so on
+//            Platform.runLater(() -> {
+//                Text text = new Text(currText);
+//                text.setFont(controller.outputLower.getFont()); // Set the same font, so the size is the same
+//                double width = text.getLayoutBounds().getWidth() // This big is the Text in the TextField
+//                        + controller.outputLower.getPadding().getLeft() + controller.outputLower.getPadding().getRight() // Add the padding of the TextField
+//                        + 2d; // Add some spacing
+//                controller.outputLower.setPrefWidth(width); // Set the width
+//                controller.outputLower.positionCaret(controller.outputLower.getCaretPosition()); // If you remove this line, it flashes a little bit
+//            });
+//        });
+//        controller.outputLower.textProperty().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> ob, String o,
+//                                String n) {
+//                // expand the textfield
+//                controller.outputLower.setPrefWidth(TextUtils.computeTextWidth(controller.outputLower.getFont(),
+//                        controller.outputLower.getText(), 0.0D) + 10);
+//            }
+//        });
     }
 
     public static void main(String[] args) {

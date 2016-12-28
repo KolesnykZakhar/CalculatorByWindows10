@@ -221,6 +221,7 @@ public class Controller {
             if (!event.isShiftDown() && !event.isAltDown() && !event.isControlDown()) {
                 switch (event.getCode()) {
                     case DIGIT1: {
+//                        button1.getProperties()
                         button1.fire();
                         break;
                     }
@@ -576,6 +577,7 @@ public class Controller {
                 operatorOne = "";
                 fullTextField = false;
                 memoryJustClicked = false;
+//                overflow(result);
                 numBeforeOneOperation = ZERO;
                 keyExpression = false;
                 percentExpression = false;
@@ -686,6 +688,7 @@ public class Controller {
             newNumber = false;
             overflow(num2);
             memoryJustClicked = false;
+//            newOperation=true;
             keyExpression = true;
         }
     }
